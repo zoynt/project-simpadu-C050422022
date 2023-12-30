@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -15,6 +14,11 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->bigInteger('lecturer_id')->unsigned();
+            $table->string('semester');
+            $table->string('academic_year');
+            $table->integer('sks');
+            $table->string('code');
+            $table->text('description');
             $table->timestamps();
 
             $table->foreign('lecturer_id', 'lecturerid_foreign')->references('id')->on('users');
