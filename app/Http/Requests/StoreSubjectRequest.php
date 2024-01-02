@@ -22,7 +22,13 @@ class StoreSubjectRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => 'required|string|max:50',
+            'lecturer_id' => 'required|string',
+            'semester' => 'required|string',
+            'academic_year' => 'required|string',
+            'sks' => 'required|integer',
+            'code'  => 'required|string|max:8',
+            'description' => 'string',   
         ];
     }
 }

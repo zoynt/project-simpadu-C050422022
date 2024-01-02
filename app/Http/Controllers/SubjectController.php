@@ -44,10 +44,10 @@ class SubjectController extends Controller
         return view('pages.subjects.edit')->with('subject', $subject);
     }
 
-    public function update(UpdateSubjectRequest $request, Subject $subject)
+    public function update(UpdateSubjectRequest $request, Subject $Subject)
     {
         $validate = $request->validated();
-        $subject->update($validate);
+        $Subject->update($validate);
         return redirect()->route('subject.index')->with('success', 'Edit User Successfully');
     }
 
