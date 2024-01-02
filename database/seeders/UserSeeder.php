@@ -14,13 +14,13 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(30)->create();
+        User::factory(50)->create();
 
         User::create([
             'name' => 'Zoya Nujula Ramadhoni',
             'email' => 'c050422022@mahasiswa.poliban.ac.id',
             'email_verified_at' => now(),
-            'password' => Hash::make('0043836923@Mhs'),
+            'password' => Hash::make('12345678'),
             'roles' => 'mahasiswa',
         ]);
     }

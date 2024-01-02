@@ -19,11 +19,11 @@ class SubjectFactory extends Factory
         return [
             'title' => fake()->word(),
             'lecturer_id' => fake()->numberBetween(1, 30),
-            'semester' => fake()->numberBetween(1, 8),
+            'semester' => "Ganjil",
             'academic_year' => "2022/2023",
-            'sks' => fake()->numberBetween(1, 3),
+            'sks' => fake()->numberBetween(2, 3),
             'code' => fake()->bothify('KC-#####'),
-            'description' => fake()->word(),
+            'description' => fake()->text(),
         ];
     }
 }
